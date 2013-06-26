@@ -1,13 +1,13 @@
-## [PureMVC][Greensock][CreateJS][RequireJS][JQuery] Demo: Simon-Says
+## [PureMVC][Greensock][CreateJS][RequireJS][JQuery] Demo: Simon Says: TypeScript [for TypeScript V 0.8.x]
 
-This demo illustrates a TypeScript project using PureMVC and other frameworks
+This demo illustrates a TypeScript VERSION 0.8.x project using PureMVC and other frameworks
 
-Libreries are loaded using requireJS
+Libraries are loaded using requireJS
 
 Simon app is compiled as an AMD module usign an Ant script (grabbed from Employee Admin demo @ https://github.com/PureMVC/puremvc-typescript-demo-employeeadmin/wiki)
 to palliate TypeScript  (actual version 0.8.x) compiler issues building a single module using multiple TypeScript files. TypeScript will probably evolve on this point in a near future (version 0.9.x).
 
-Known breaking changes between 0.8 and 0.9:
+Known breaking changes on TypeScript between 0.8 and 0.9:
 
 The ‘module’ keyword no longer creates a type
 Description: In 0.9.0, a clearer distinction is made between roles of namespaces, types, and values. Modules now contribute only to namespaces and values and will no longer contribute a type.
@@ -22,6 +22,7 @@ Reason: This simplification of the role of modules allow modules to now extend c
 
 ## Status
 Development - [Version 1.0]
+Abandon in favor to new TS version 0.9.x (http://)
 
 
 ## Platforms / Technologies
