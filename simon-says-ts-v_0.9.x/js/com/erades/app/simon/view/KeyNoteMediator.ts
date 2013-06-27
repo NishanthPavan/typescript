@@ -1,28 +1,20 @@
-///<reference path='../../../../../../lib/puremvc/puremvc.d.ts'/>
-///<reference path='./components/KeyNoteList.ts'/>
-///<reference path='../abc/NotificationNames.ts'/>
-///<reference path='../abc/ProxyNames.ts'/>
-///<reference path='../model/SoundProxy.ts'/>
-///<reference path='../model/GameProxy.ts'/>
-
 /**
  * KeyNote component <code>Mediator</code>.
  */
 
 
-import KeyNoteList = module("com/erades/app/simon/view/components/KeyNoteList");
-import KeyNoteVO = module("com/erades/app/simon/model/KeyNoteVO");
-import NotificationNames = module("com/erades/app/simon/abc/NotificationNames");
-import SoundProxy = module("com/erades/app/simon/model/SoundProxy");
-import ProxyNames = module("com/erades/app/simon/abc/ProxyNames");
-import GameProxy = module("com/erades/app/simon/model/GameProxy");
+import KeyNoteList = require("../view/components/KeyNoteList");
+import KeyNoteVO = require("../model/KeyNoteVO");
+import NotificationNames = require("../abc/NotificationNames");
+import SoundProxy = require("../model/SoundProxy");
+import ProxyNames = require("../abc/ProxyNames");
+import GameProxy = require("../model/GameProxy");
 
 
-import Mediator = module("org/puremvc/typescript/patterns/mediator/Mediator");
+import Mediator = require("org/puremvc/typescript/patterns/mediator/Mediator");
+import INotification = require("org/puremvc/typescript/interfaces/INotification");
 
 	 class KeyNoteMediator extends Mediator {
-
-
 
 
 		/**
@@ -50,6 +42,7 @@ import Mediator = module("org/puremvc/typescript/patterns/mediator/Mediator");
 		}
 
 
+
 		/**
 		 * @override
 		 */
@@ -59,10 +52,11 @@ import Mediator = module("org/puremvc/typescript/patterns/mediator/Mediator");
 			];
 		}
 
+
 		/**
 		 * @override
 		 */
-		handleNotification( note:puremvc.INotification ):void {
+		handleNotification( note:INotification ):void {
 			switch( note.getName() ) {
 
 				case NotificationNames.KN_CLICK:

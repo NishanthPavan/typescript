@@ -1,11 +1,9 @@
-///<reference path='../../../../../../../lib/puremvc/puremvc.d.ts'/>
 ///<reference path='../../../../../../../lib/jquery/jquery.d.ts'/>
 ///<reference path='../../../../../../../lib/greensock/GreenSock.d.ts'/>
-///<reference path='../../model/KeyNoteVO.ts'/>
-///<reference path='../../abc/NotificationNames.ts'/>
 
 
-import KeyNoteVO = module("com/erades/app/simon/model/KeyNoteVO");
+
+import KeyNoteVO = require("../../model/KeyNoteVO");
 
      class KeyNoteList {
 
@@ -47,5 +45,6 @@ import KeyNoteVO = module("com/erades/app/simon/model/KeyNoteVO");
     }
 
 export = KeyNoteList;
+
 
 

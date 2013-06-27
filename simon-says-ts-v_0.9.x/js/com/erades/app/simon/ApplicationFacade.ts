@@ -1,13 +1,4 @@
-
-///<reference path='../../../../../lib/puremvc/puremvc.d.ts'/>
-
-
-
 ///<reference path='../../../../../lib/jquery/jquery.d.ts'/>
-///<reference path='abc/NotificationNames.ts'/>
-///<reference path='controller/StartupCommand.ts'/>
-
-
 /**
  * PureMVC <code>Facade</code> for this application.
  */
@@ -15,10 +6,10 @@
 
 
 
-    import NotificationNames = module("com/erades/app/simon/abc/NotificationNames");
-    import StartupCommand = module("com/erades/app/simon/controller/StartupCommand");
+    import NotificationNames = require("./abc/NotificationNames");
+    import StartupCommand = require("./controller/StartupCommand");
 
-    import Facade = module("org/puremvc/typescript/patterns/facade/Facade");
+    import Facade = require("org/puremvc/typescript/patterns/facade/Facade");
 
 
 
@@ -65,6 +56,7 @@
 			return <ApplicationFacade>Facade.instance;
 		}
 	}
+
 
 
 

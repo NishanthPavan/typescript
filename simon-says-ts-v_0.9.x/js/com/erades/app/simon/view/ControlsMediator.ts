@@ -1,9 +1,8 @@
 
 ///<reference path='../../../../../../lib/jquery/jquery.d.ts'/>
 ///<reference path='../../../../../../lib/greensock/GreenSock.d.ts'/>
-///<reference path='../abc/NotificationNames.ts'/>
-///<reference path='../abc/ProxyNames.ts'/>
-///<reference path='../model/GameProxy.ts'/>
+
+
 
 
 /**
@@ -11,12 +10,12 @@
  *  UIcomoponents besides keyNotes from Simon
  */
 
-import NotificationNames = module("com/erades/app/simon/abc/NotificationNames");
-import ProxyNames = module("com/erades/app/simon/abc/ProxyNames");
-import GameProxy = module("com/erades/app/simon/model/GameProxy");
+import NotificationNames = require("../abc/NotificationNames");
+import ProxyNames = require("../abc/ProxyNames");
+import GameProxy = require("../model/GameProxy");
 
-
-import Mediator = module("org/puremvc/typescript/patterns/mediator/Mediator");
+import Mediator = require("org/puremvc/typescript/patterns/mediator/Mediator");
+import INotification = require("org/puremvc/typescript/interfaces/INotification");
 
      class ControlsMediator extends Mediator {
 
@@ -65,10 +64,11 @@ import Mediator = module("org/puremvc/typescript/patterns/mediator/Mediator");
             ];
         }
 
+
         /**
          * @override
          */
-            handleNotification( note:puremvc.INotification ):void {
+            handleNotification( note:INotification ):void {
 
             switch( note.getName() ) {
 

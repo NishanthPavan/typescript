@@ -1,13 +1,5 @@
-///<reference path='../../../../../../lib/puremvc/puremvc.d.ts'/>
-///<reference path='../abc/NotificationNames.ts'/>
-
-
-
-
-import NotificationNames = module("com/erades/app/simon/abc/NotificationNames");
-// import p = module("puremvc-typescript-standard-1.0")
-
-import Proxy = module("org/puremvc/typescript/patterns/proxy/Proxy");
+import NotificationNames = require("../abc/NotificationNames");
+import Proxy = require("org/puremvc/typescript/patterns/proxy/Proxy");
 
      class GameProxy  extends Proxy {
 
@@ -23,7 +15,6 @@ import Proxy = module("org/puremvc/typescript/patterns/proxy/Proxy");
             this._numItems = idArray.length;
 
         }
-
 
 
         private resetUserNotes(){
@@ -109,4 +100,6 @@ import Proxy = module("org/puremvc/typescript/patterns/proxy/Proxy");
     }
 
 export = GameProxy;
+
+
 

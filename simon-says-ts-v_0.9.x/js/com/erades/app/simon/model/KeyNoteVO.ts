@@ -1,6 +1,3 @@
-///<reference path='../../../../../../lib/puremvc/puremvc.d.ts'/>
-///<reference path='../../../../../../lib/jquery/jquery.d.ts'/>
-
 
 /**
  * A simple value Object to store data
@@ -21,4 +18,5 @@
     }
 
 export = KeyNoteVO;
+
 

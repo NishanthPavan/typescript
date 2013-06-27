@@ -1,15 +1,12 @@
-///<reference path='../../../../../../lib/puremvc/puremvc.d.ts'/>
-///<reference path='../abc/NotificationNames.ts'/>
 ///<reference path='../../../../../../lib/createJs/easeljs.d.ts'/>
 ///<reference path='../../../../../../lib/createJs/SoundJS.d.ts'/>
 ///<reference path='../../../../../../lib/createJs/preloadjs.d.ts'/>
 ///<reference path='../../../../../../lib/createJs/tweenjs.d.ts'/>
 
+import NotificationNames = require("../abc/NotificationNames");
 
-import NotificationNames = module("com/erades/app/simon/abc/NotificationNames");
 
-
-import Proxy = module("org/puremvc/typescript/patterns/proxy/Proxy");
+import Proxy = require("org/puremvc/typescript/patterns/proxy/Proxy");
 
 
 
@@ -47,5 +44,7 @@ import Proxy = module("org/puremvc/typescript/patterns/proxy/Proxy");
     }
 
 export = SoundProxy;
+
+
 
 
