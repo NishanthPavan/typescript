@@ -3,9 +3,6 @@
  * A simple value Object to store data
  */
 
-
-
-
      class KeyNoteVO {
 
         private _id:string;
