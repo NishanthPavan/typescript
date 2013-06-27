@@ -8,7 +8,7 @@ Just make sure you use these params at compiling with tsc:
 --target ES5
 also it is very convenient to use:  --sourcemap
 
-* Demo
+# Demo
 you can see a demo project om my Simon Says project (V 0.9.x) (<a href="https://github.com/area73/typescript/tree/master/simon-says-ts-v_0.9.x">https://github.com/area73/typescript/tree/master/simon-says-ts-v_0.9.x</a>)
 
 ## License
