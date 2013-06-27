@@ -29,16 +29,7 @@ require.config({
             createjs: '../lib/createJs/createjs.min', // for loading sound
             TweenMax: '../lib/greensock/TweenMax.min', //for animations
             CSSPlugin: '../lib/greensock/CSSPlugin.min' // for animation of CSS porperties
-            // puremvc: '../lib/puremvc/puremvc-typescript-standard-1.0-min' // PureMVC framework for producttion
-            // puremvc: 'lib/puremvc/puremvc-typescript-standard-1.0', // PureMVC framework [Comment this line is you uncomment above] FIXME:: Don't know why this file is failing
-            // "com.erades.app.simon": 'bin/simon-typescript-1.0-min'  // App min for production
-            // "com.erades.app.simon": 'bin/simon-typescript-1.0' // Comment this line if you uncomment above
-        },
-
-        shims: {
-            "com.erades.app.simon": { deps: ["puremvc"]}
         }
-
     }
 );
 
@@ -55,10 +46,10 @@ require(
         'createjs'
     ],
 
-    function (simonApp) {
+    function (ApplicationFacade) {
         //Wait for the DOM to be ready before setting up the application.
         jQuery(function () {
-            var applicationFacade/*ApplicationFacade*/ = simonApp.ApplicationFacade.getInstance();
+            var applicationFacade/*ApplicationFacade*/ = ApplicationFacade.getInstance();
             applicationFacade.startup(jQuery("body"));
         })
     }

@@ -1,0 +1,72 @@
+PrepViewCommand --> inicializamos el mediador
+---------------
+import KeyboardMediator = require("../view/KeyboardMediator");
+...
+var keyboardMediator:KeyboardMediator = new KeyMediator(MediatorNames.KEYBOARD,null);
+this.facade.registerMediator(keyboardMediator);
+
+
+MediatorNames
+-------------
+static KEYBOARD:string = "KeyboardMediator";
+
+
+KeyboardMediator
+----------------
+///<reference path='../../../../../../lib/jquery/jquery.d.ts'/>
+
+import NotificationNames = require("../abc/NotificationNames");
+import Mediator = require("org/puremvc/typescript/patterns/mediator/Mediator");
+import INotification = require("org/puremvc/typescript/interfaces/INotification");
+
+
+  class KeyboardMediator extends Mediator {
+
+      constructor( name:string,  viewComponent:string ) {
+          super( name, viewComponent );
+          this.registerListeners();
+      }
+
+       private registerListeners(){
+          $(document).on("keypress", (ev) => {this.sendNotification(NotificationNames.KEY_PRESS, ev.which)})
+       }
+
+
+      /**
+       * @override
+       */
+          listNotificationInterests():string[] {
+          return [
+              NotificationNames.KEY_PRESS
+          ];
+      }
+
+      /**
+       * @override
+       */
+          handleNotification( note:INotification ):void {
+
+          switch( note.getName() ) {
+
+              case NotificationNames.KEY_PRESS:
+                  this.processInfo(note.getBody());
+                  break;
+          }
+      }
+
+        private processInfo(keyNum:number){
+            if (keyNum > 48 && keyNum < 56){
+                this.sendNotification(NotificationNames.KN_CLICK,(keyNum-48))
+            }
+
+        }
+}
+ export = KeyboardMediator;
+
+
+
+
+
+NotificationNames
+-----------------
+static KEY_PRESS:string = "keyboradPress";

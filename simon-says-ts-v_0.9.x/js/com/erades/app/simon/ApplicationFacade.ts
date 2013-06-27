@@ -13,7 +13,7 @@
 
 
 
-	export class ApplicationFacade extends Facade {
+	class ApplicationFacade extends Facade {
 		/**
 		 * Start the application.
 		 *
@@ -56,6 +56,8 @@
 			return <ApplicationFacade>Facade.instance;
 		}
 	}
+
+    export = ApplicationFacade;
 
 
 
