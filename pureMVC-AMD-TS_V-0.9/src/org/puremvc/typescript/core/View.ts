@@ -259,7 +259,7 @@ import Observer = require("../patterns/observer/Observer");
 		 * @return
 		 *		A <code>Mediator</code> is registered with the given <code>mediatorName</code>.
 		 */
-		hasMediator( mediatorName:string ):bool
+		hasMediator( mediatorName:string ):boolean
 		{
 			return this.mediatorMap[ mediatorName ] != null;
 		}

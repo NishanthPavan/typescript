@@ -59,7 +59,7 @@ import IProxy = require("./IProxy");
 		 * @return
 		 *		A Proxy is currently registered with the given <code>proxyName</code>.
 		 */
-		hasProxy( proxyName:string ):bool;
+		hasProxy( proxyName:string ):boolean;
 	}
 
     export = IModel;

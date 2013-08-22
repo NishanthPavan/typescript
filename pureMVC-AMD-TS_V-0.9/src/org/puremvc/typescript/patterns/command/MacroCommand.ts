@@ -17,19 +17,20 @@
 
 
 import ICommand = require("../../interfaces/ICommand");
-import INotifier = require("../../interfaces/INotifier");
 import INotification = require("../../interfaces/INotification");
 import Notifier = require("../observer/Notifier");
 
 
-	 class MacroCommand extends Notifier implements ICommand, INotifier {
+
+	 class MacroCommand extends Notifier implements ICommand {
 		/**
 		 * An array of <code>ICommand</code>s.
 		 *
 		 * @protected
 		 */
 		subCommands:Function[] = null;
-		
+
+
 		/**
 		 * Constructs a <code>MacroCommand</code> instance.
 		 *
@@ -46,6 +47,7 @@ import Notifier = require("../observer/Notifier");
             this.subCommands = new Array<Function>();
 			this.initializeMacroCommand();
 		}
+
 
 
 
@@ -75,6 +77,7 @@ import Notifier = require("../observer/Notifier");
 		{
 		
 		}
+
 
 
 		/**
@@ -121,5 +124,6 @@ import Notifier = require("../observer/Notifier");
 			this.subCommands.splice(0);
 		}
 	}
+
 
 export = MacroCommand;

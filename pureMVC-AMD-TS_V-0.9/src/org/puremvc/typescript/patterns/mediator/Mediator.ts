@@ -13,13 +13,12 @@
 
 
 import IMediator = require("../../interfaces/IMediator");
-import INotifier = require("../../interfaces/INotifier");
 import INotification = require("../../interfaces/INotification");
 import Notifier = require("../observer/Notifier");
 
 
 
-	 class Mediator extends Notifier implements IMediator, INotifier {
+	 class Mediator extends Notifier implements IMediator {
 		/**
 		 * The name of the <code>Mediator</code>.
 		 *

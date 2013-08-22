@@ -24,15 +24,11 @@
 	 */
 
 import IProxy = require("../../interfaces/IProxy");
-import INotifier = require("../../interfaces/INotifier");
-
-
-
 import Notifier = require("org/puremvc/typescript/patterns/observer/Notifier");
 
 
 
-	 class Proxy extends Notifier implements IProxy, INotifier {
+	 class Proxy extends Notifier implements IProxy {
 		/**
 		 * The data object controlled by the <code>Proxy</code>.
 		 *

@@ -7,12 +7,12 @@
 
 
 import ICommand = require("../../interfaces/ICommand");
-import INotifier = require("../../interfaces/INotifier");
 import INotification = require("../../interfaces/INotification");
 import Notifier = require("../observer/Notifier");
 
 
- class SimpleCommand extends Notifier implements ICommand, INotifier {
+
+ class SimpleCommand extends Notifier implements ICommand  {
 		/**
 		 * Fulfill the use-case initiated by the given <code>INotification</code>.
 		 * 
@@ -27,8 +27,11 @@ import Notifier = require("../observer/Notifier");
 		{
 
 		}
+
+
 	}
 export = SimpleCommand;
+
 
 
 
